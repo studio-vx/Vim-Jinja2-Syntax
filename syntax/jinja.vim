@@ -19,14 +19,14 @@ endif
 
 " For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded
-if !exists("main_syntax")
-  if version < 600
-    syntax clear
-  elseif exists("b:current_syntax")
-    finish
-  endif
-  let main_syntax = 'jinja'
-endif
+" if !exists("main_syntax")
+"   if version < 600
+"     syntax clear
+"   elseif exists("b:current_syntax")
+"     finish
+"   endif
+"   let main_syntax = 'jinja'
+" endif
 
 " Pull in the HTML syntax.
 if g:jinja_syntax_html
@@ -134,8 +134,8 @@ if version >= 508 || !exists("did_jinja_syn_inits")
   delcommand HiLink
 endif
 
-let b:current_syntax = "jinja"
+" let b:current_syntax = "jinja"
 
-if main_syntax == 'jinja'
-  unlet main_syntax
-endif
+" if main_syntax == 'jinja'
+"   unlet main_syntax
+" endif
